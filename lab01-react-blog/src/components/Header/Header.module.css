@@ -1,52 +1,35 @@
 .header {
-  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
 .container {
-  width: min(1120px, calc(100% - 64px));
-  min-height: 88px;
-  margin-inline: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  font-weight: 750;
-  font-size: 1.1rem;
-  letter-spacing: -0.025em;
-  white-space: nowrap;
-}
-.mark {
-  display: grid;
-  place-items: center;
-  background: var(--green);
+
+.title {
   color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  color: #e0e7ff;
+  text-decoration: none;
   font-size: 1rem;
+  transition: color 0.2s;
 }
-.count {
-  font-size: 0.8rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-@media (max-width: 600px) {
-  .container {
-    width: calc(100% - 32px);
-    flex-wrap: wrap;
-    padding-block: 18px;
-    gap: 18px;
-  }
-  .count {
-    margin-left: auto;
-  }
-  .container > nav {
-    order: 3;
-    flex-basis: 100%;
-  }
+
+.link:hover {
+  color: #fff;
 }

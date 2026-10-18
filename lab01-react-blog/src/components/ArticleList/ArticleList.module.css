@@ -1,40 +1,28 @@
-.section {
-  scroll-margin-top: 24px;
-}
-.heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.heading h2 {
-  font-size: 1.6rem;
-  letter-spacing: -0.035em;
-}
-.heading span {
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-/* Flexbox, а не Grid: это требование первой лабораторной. */
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
+
+/* 3 карточки в ряд на широких экранах */
 .list > * {
-  flex: 0 0 calc((100% - 48px) / 3);
-  min-width: 0;
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: 280px;
 }
-@media (max-width: 960px) {
+
+/* 2 карточки на средних */
+@media (max-width: 768px) {
   .list > * {
-    flex-basis: calc((100% - 24px) / 2);
+    flex: 1 1 calc(50% - 1.5rem);
   }
 }
-@media (max-width: 600px) {
+
+/* 1 карточка на узких */
+@media (max-width: 520px) {
   .list > * {
-    flex-basis: 100%;
+    flex: 1 1 100%;
   }
 }

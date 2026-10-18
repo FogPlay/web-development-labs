@@ -1,32 +1,18 @@
-import styles from "./ArticleCard.module.css";
-
+import styles from './ArticleCard.module.css';
 function ArticleCard({ article }) {
-  const { id, title, excerpt, author, date, dateTime, tag, image, imageAlt } =
-    article;
-
+  const { title, excerpt, author, date, tag, image } = article;
   return (
-    <article className={styles.card} aria-labelledby={`article-${id}`}>
-      <img
-        src={image}
-        alt={imageAlt}
-        className={styles.image}
-        width="600"
-        height="300"
-        loading="lazy"
-      />
+    <article className={styles.card}>
+      <img src={image} alt={title} className={styles.image} />
       <div className={styles.body}>
         <span className={styles.tag}>{tag}</span>
-        <h3 id={`article-${id}`} className={styles.title}>
-          {title}
-        </h3>
+        <h2 className={styles.title}>{title}</h2>
         <p className={styles.excerpt}>{excerpt}</p>
         <footer className={styles.footer}>
           <span className={styles.author}>{author}</span>
-          <time dateTime={dateTime}>{date}</time>
+          <span className={styles.date}>{date}</span>
         </footer>
       </div>
-    </article>
-  );
+    </article>  );
 }
-
 export default ArticleCard;
