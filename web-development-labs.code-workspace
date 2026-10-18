@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "Веб-разработка — лабораторные"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": true
+    },
+    "files.encoding": "utf8",
+    "editor.tabSize": 2
+  }
+}

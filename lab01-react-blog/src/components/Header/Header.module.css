@@ -1,0 +1,52 @@
+.header {
+  border-bottom: 1px solid var(--border);
+}
+.container {
+  width: min(1120px, calc(100% - 64px));
+  min-height: 88px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 750;
+  font-size: 1.1rem;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+.mark {
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+.count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 32px);
+    flex-wrap: wrap;
+    padding-block: 18px;
+    gap: 18px;
+  }
+  .count {
+    margin-left: auto;
+  }
+  .container > nav {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
